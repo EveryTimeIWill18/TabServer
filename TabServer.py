@@ -152,9 +152,9 @@ class Workbook(ServerAuth):
 
 		# --- setup for date field extraction
 		date_lambda = datetime.strptime((query_children[-1].attrib\
-														   .get('value')\
-														   .strip('#')\
-														   .strip(' 00:00:00')), "%Y-%m-%d")
+								   .get('value')\
+							           .strip('#')\
+							           .strip(' 00:00:00')), "%Y-%m-%d")
 		current_date = date.today()
 		day_difference = int(str(date.today() - date(date_lambda.year, 
 									date_lambda.month, date_lambda.day)).split(" ")[0])
